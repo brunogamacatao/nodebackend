@@ -2,7 +2,7 @@ import servidor from './servidor';
 import mongoose from "mongoose";
 
 const porta = process.env.PORT || 3000;
-const mongoUrl = 'mongodb://localhost/nodebackend';
+const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/nodebackend';
 
 class Aplicacao {
   public inicia(): void {

@@ -30,8 +30,7 @@ export class Contatos {
             for(i = 0; i < this.contatos.length; i++) {
                 if (this.contatos[i].id === +req.params.id) break;
             }
-            let novoContato = req.body;
-            this.contatos.splice(i, 1, novoContato);
+            this.contatos[i] = req.body;
         });
         router.delete('/:id', (req, res) => {
             let i = -1;
